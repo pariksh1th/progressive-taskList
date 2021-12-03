@@ -1,0 +1,91 @@
+/* color palet : content(#494F50) title(#3F4446) body() */
+
+body {
+  background-color: #2f3537;
+  font-family: "Rubik", sans-serif;
+}
+
+h1 {
+  color: white;
+  font-family: "Bebas Neue", cursive;
+
+  font-size: 3rem;
+}
+
+h4 {
+  background-color: #3f4446;
+  color: white;
+  opacity: 0.9;
+  padding: 0.5rem;
+  margin-left: -0.3rem;
+  margin-right: -0.3rem;
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+}
+hr {
+  margin: 1rem 0;
+  color: gray;
+  background-color: gray;
+  border: 0;
+  opacity: 0.25;
+  height: 1px;
+  width: 95%;
+}
+
+#logo {
+  padding-right: 5px;
+}
+
+#plus-bt {
+  padding-left: 14rem;
+  color: gray;
+  opacity: 0.5;
+}
+
+#plus-bt:hover {
+  color: rgb(206, 198, 198);
+}
+
+#root {
+  padding-left: 5em;
+  padding-top: 2em;
+}
+.grey-bt {
+  color: gray;
+}
+
+.grey-bt:hover {
+  color: rgb(206, 198, 198);
+}
+
+.no-tasks {
+  color: gray;
+  opacity: 0.8;
+  padding-left: 1em;
+}
+
+.status-tag {
+  color: white;
+  padding: 2px 7px 0px;
+  border-radius: 0.3rem;
+  background-color: #b91646;
+}
+
+.lists {
+  width: 30%;
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+.task {
+  background-color: #494f50;
+  width: 80%;
+  padding: 0rem 0.3rem 0rem;
+  border-radius: 0.3rem;
+}
+
+.content {
+  color: white;
+  opacity: 0.7;
+  margin-top: -1rem;
+}
