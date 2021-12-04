@@ -68,7 +68,6 @@ hr {
   color: white;
   padding: 2px 7px 0px;
   border-radius: 0.3rem;
-  background-color: #b91646;
 }
 
 .lists {
@@ -88,4 +87,30 @@ hr {
   color: white;
   opacity: 0.7;
   margin-top: -1rem;
+}
+
+form.create-note input,
+form.create-note textarea {
+  width: 80%;
+  border: none;
+  color: white;
+  outline: none;
+  padding: 0.5rem 0rem 0rem 0.4rem;
+  font-size: 1em;
+  font-family: inherit;
+  resize: none;
+}
+
+form.create-note input {
+  margin-top: 0.6rem;
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+  background-color: #3f4446;
+  padding-bottom: 0.3rem;
+}
+
+form.create-note textarea {
+  border-bottom-left-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+  background-color: #494f50;
 }
