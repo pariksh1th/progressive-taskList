@@ -37,9 +37,14 @@ function List(props) {
         {list.map((data, index) => (
           <Task
             title={data}
+            tagName={props.tagName}
             key={index}
             id={index}
+            todoList={props.todoList}
+            doingList={props.doingList}
+            doneList={props.doneList}
             popFunction={props.popFunction}
+            pushFunction={props.pushFunction}
             listName={props.listName}
           />
         ))}

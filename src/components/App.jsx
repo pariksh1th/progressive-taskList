@@ -5,12 +5,9 @@ import List from "./List";
 function App() {
   //<-------- List section ------------------------------>
 
-  const [todo, setTodo] = useState(["complete task 1"]);
-  const [doing, setDoing] = useState(["complete task 1"]);
-  const [done, setDone] = useState([
-    "complete task 1",
-    "Tempor duis elit nulla laboris ea magna culpa deserunt anim.",
-  ]);
+  const [todo, setTodo] = useState(["Sunt amet est enim  td."]);
+  const [doing, setDoing] = useState(["Sunt amet est enim sint doing."]);
+  const [done, setDone] = useState(["Sunt amet est enim sint done."]);
 
   // add task to list
   function pushNote(data, listName) {
@@ -42,6 +39,9 @@ function App() {
         list={todo}
         pushFunction={pushNote}
         listName={setTodo}
+        todoList={setTodo}
+        doingList={setDoing}
+        doneList={setDone}
         popFunction={popNote}
         tagName="To do"
         listClass="todoList"
@@ -54,6 +54,9 @@ function App() {
         pushFunction={pushNote}
         popFunction={popNote}
         listName={setDoing}
+        todoList={setTodo}
+        doingList={setDoing}
+        doneList={setDone}
         tagName="Doing"
         color="#00A19D"
         listClass="doingList"
@@ -64,6 +67,9 @@ function App() {
         popFunction={popNote}
         pushFunction={pushNote}
         listName={setDone}
+        todoList={setTodo}
+        doingList={setDoing}
+        doneList={setDone}
         tagName=" Done"
         color="#B24080"
         listClass="doneList"

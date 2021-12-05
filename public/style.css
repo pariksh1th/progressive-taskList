@@ -48,13 +48,29 @@ hr {
 
 #delete-bt {
   position: absolute;
-  right: 0.4rem;
+  right: 1.5rem;
   color: gray;
   opacity: 0.5;
 }
 
 #delete-bt:hover {
   color: aliceblue;
+}
+
+#forword-bt {
+  position: absolute;
+  right: 0.4rem;
+  color: gray;
+}
+
+#forword-bt:hover,
+#backword-bt:hover {
+  color: aliceblue;
+}
+
+#backword-bt {
+  color: gray;
+  padding-left: 0.3rem;
 }
 
 .grey-bt {
