@@ -3,8 +3,14 @@ import React from "react";
 function Task(props) {
   return (
     <div className="task">
-      <h4>{props.title}</h4>
-      <span className="content">{props.content}</span>
+      <span className="h4">{props.title}</span>
+      <i
+        onClick={() => {
+          props.popFunction(props.id, props.listName);
+        }}
+        id="delete-bt"
+        class="fas fa-trash"
+      ></i>
     </div>
   );
 }

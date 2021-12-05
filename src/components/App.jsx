@@ -3,36 +3,71 @@ import Header from "./Header";
 import List from "./List";
 
 function App() {
-  const [todo, setTodo] = useState([
-    {
-      title: "oajk vapoij g",
-      content:
-        "Ullamco aute sunt sit aute et est non sint reprehenderit dolore sint exercitation nulla.",
-    },
+  //<-------- List section ------------------------------>
+
+  const [todo, setTodo] = useState(["complete task 1"]);
+  const [doing, setDoing] = useState(["complete task 1"]);
+  const [done, setDone] = useState([
+    "complete task 1",
+    "Tempor duis elit nulla laboris ea magna culpa deserunt anim.",
   ]);
-  const [doing, setDoing] = useState([]);
-  const [done, setDone] = useState([]);
+
+  // add task to list
+  function pushNote(data, listName) {
+    listName((perv) => [data, ...perv]);
+  }
+
+  // delete task from list
+  function popNote(id, listName) {
+    listName((prevNotes) => {
+      return prevNotes.filter((noteItem, index) => {
+        return index !== id;
+      });
+    });
+  }
+  //<----- ++++++++++++++++++++++ ------------------------------>
+
+  //<--- add a task button functionality ------------------------>
+  const [addClick, setAddClick] = useState(false);
+
+  function click() {
+    setAddClick((perv) => !perv);
+  }
+  //<---- ++++++++++++++++++++++++ ------------------------------>
 
   return (
     <div>
-      <Header />
+      <Header clickFunction={click} />
       <List
         list={todo}
+        pushFunction={pushNote}
+        listName={setTodo}
+        popFunction={popNote}
+        tagName="To do"
+        listClass="todoList"
         lenght={todo.length}
-        statusTag="To Do"
         color="#b91646"
+        clickVlaue={addClick}
       />
       <List
         list={doing}
-        statusTag="Doing"
+        pushFunction={pushNote}
+        popFunction={popNote}
+        listName={setDoing}
+        tagName="Doing"
         color="#00A19D"
+        listClass="doingList"
         lenght={doing.length}
       />
       <List
         list={done}
-        statusTag=" Done"
+        popFunction={popNote}
+        pushFunction={pushNote}
+        listName={setDone}
+        tagName=" Done"
         color="#B24080"
-        lenght={doing.length}
+        listClass="doneList"
+        lenght={done.length}
       />
     </div>
   );

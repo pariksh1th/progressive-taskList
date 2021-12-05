@@ -1,24 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 
-function Form() {
+function Form(props) {
+  const [note, setNote] = useState("");
+
+  function handelChange(event) {
+    const value = event.target.value;
+
+    setNote(value);
+  }
+
   return (
     <div>
       <form className="create-note">
         <input
-          //   onChange={}
-          //   value={}
           name="title"
-          placeholder="Title"
+          placeholder="Add Task"
+          value={note}
+          onChange={handelChange}
           autoFocus="autofocus"
         />
-
-        <textarea
-          //   onChange={handleChange}
-          //   value={note.content}
-          name="content"
-          placeholder="Take a note..."
-          rows="3"
-        />
+        <span
+          className="form-add"
+          onClick={() => {
+            props.pushFunction(note, props.listName);
+            setNote("");
+          }}
+        >
+          Add
+        </span>
       </form>
     </div>
   );

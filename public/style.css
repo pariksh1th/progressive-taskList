@@ -8,19 +8,14 @@ body {
 h1 {
   color: white;
   font-family: "Bebas Neue", cursive;
-
   font-size: 3rem;
 }
 
-h4 {
-  background-color: #3f4446;
+.h4 {
   color: white;
   opacity: 0.9;
   padding: 0.5rem;
-  margin-left: -0.3rem;
-  margin-right: -0.3rem;
-  border-top-left-radius: 0.3rem;
-  border-top-right-radius: 0.3rem;
+  margin: 0.8rem 0px;
 }
 hr {
   margin: 1rem 0;
@@ -30,6 +25,11 @@ hr {
   opacity: 0.25;
   height: 1px;
   width: 95%;
+}
+
+#root {
+  padding-left: 5em;
+  padding-top: 2em;
 }
 
 #logo {
@@ -46,10 +46,17 @@ hr {
   color: rgb(206, 198, 198);
 }
 
-#root {
-  padding-left: 5em;
-  padding-top: 2em;
+#delete-bt {
+  position: absolute;
+  right: 0.4rem;
+  color: gray;
+  opacity: 0.5;
 }
+
+#delete-bt:hover {
+  color: aliceblue;
+}
+
 .grey-bt {
   color: gray;
 }
@@ -70,47 +77,59 @@ hr {
   border-radius: 0.3rem;
 }
 
-.lists {
+.todoList {
+  width: 30%;
+  display: inline-block;
+  margin-right: 2rem;
+}
+.doingList {
+  position: absolute;
+  width: 30%;
+  display: inline-block;
+  margin-right: 2rem;
+  margin-top: -3rem;
+  left: 28rem;
+  top: 16.61rem;
+}
+.doneList {
+  position: absolute;
+  right: 2rem;
   width: 30%;
   display: inline-block;
   margin-right: 2rem;
 }
 
 .task {
-  background-color: #494f50;
+  background-color: #3f4446;
   width: 80%;
-  padding: 0rem 0.3rem 0rem;
+  padding: 0.5rem 0.1rem 0.5rem;
   border-radius: 0.3rem;
-}
-
-.content {
-  color: white;
-  opacity: 0.7;
-  margin-top: -1rem;
-}
-
-form.create-note input,
-form.create-note textarea {
-  width: 80%;
-  border: none;
-  color: white;
-  outline: none;
-  padding: 0.5rem 0rem 0rem 0.4rem;
-  font-size: 1em;
-  font-family: inherit;
-  resize: none;
+  margin: 0.6rem 0rem 0.6rem;
+  position: relative;
 }
 
 form.create-note input {
+  width: 73%;
+  border: none;
+  color: white;
+  outline: none;
+  padding: 0.5rem 0rem 0.3rem 0.4rem;
+  font-size: 1em;
+  font-family: inherit;
+  resize: none;
+  border-radius: 0.3rem 0rem 0rem 0.3rem;
   margin-top: 0.6rem;
-  border-top-left-radius: 0.3rem;
-  border-top-right-radius: 0.3rem;
   background-color: #3f4446;
-  padding-bottom: 0.3rem;
 }
 
-form.create-note textarea {
-  border-bottom-left-radius: 0.3rem;
-  border-bottom-right-radius: 0.3rem;
-  background-color: #494f50;
+.form-add {
+  color: gray;
+  opacity: 0.8;
+  background-color: #3f4446;
+  padding: 0.5rem 0.3rem 0.3rem;
+  border-radius: 0rem 0.3rem 0.3rem 0rem;
+}
+
+.form-add:hover {
+  color: white;
 }
